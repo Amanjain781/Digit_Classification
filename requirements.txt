@@ -21,14 +21,14 @@ decorator==5.0.9
 defusedxml==0.7.1
 entrypoints==0.3
 flatbuffers==1.12
-gast==0.3.3
+gast==0.4.0
 gitdb==4.0.7
 GitPython==3.1.18
 google-auth==1.35.0
 google-auth-oauthlib==0.4.5
 google-pasta==0.2.0
-grpcio==1.32.0
-h5py==2.10.0
+grpcio==1.34.0
+h5py==3.1.0
 idna==3.2
 ipykernel==6.2.0
 ipython==7.26.0
