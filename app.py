@@ -9,6 +9,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from win32com.client import Dispatch
 
+# for gpu use
 physical_devices = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
@@ -34,10 +35,7 @@ def preprocessing(img):
         return img 
 
 
-
-
-
-    
+   
 def main():
     st.title("Digit Classification Apps Using CNN")
     st.write("Build  with streamlit, keras, Tensorflow & python")
