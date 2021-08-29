@@ -7,18 +7,18 @@ import cv2 as cv
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-from win32com.client import Dispatch
+#from win32com.client import Dispatch
 
 # for gpu use
 physical_devices = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
+'''
 def speak(text):
     speak = Dispatch(("SAPI.SpVoice"))
     speak.Speak(text)
     
 model = load_model('model.h5')
-
+'''
 def preprocessing(img):
     try:
         img = img.astype('uint8')
@@ -60,34 +60,34 @@ def main():
                 if prob_value  > 0.90:
                     if classIndex == 0:
                         st.success("ZERO")
-                        speak("Predicted Number is ZERO")
+                        #speak("Predicted Number is ZERO")
                     elif classIndex == 1:
                         st.success("ONE")
-                        speak("Predicted Number is ONE")
+                        #speak("Predicted Number is ONE")
                     elif classIndex == 2:
                         st.success("TWO")
-                        speak("Predicted Number is TWO")
+                        #speak("Predicted Number is TWO")
                     elif classIndex == 3:
                         st.success("THREE")
-                        speak("Predicted Number is THREE")
+                        #speak("Predicted Number is THREE")
                     elif classIndex == 4:
                         st.success("FOUR")
-                        speak("Predicted Number is FOUR")
+                        #speak("Predicted Number is FOUR")
                     elif classIndex == 5:
                         st.success("FIVE")
-                        speak("Predicted Number is FIVE")
+                        #speak("Predicted Number is FIVE")
                     elif classIndex == 6:
                         st.success("SIX")
-                        speak("Predicted Number is SIX")
+                        #speak("Predicted Number is SIX")
                     elif classIndex == 7:
                         st.success("SEVEN")
-                        speak("Predicted Number is SEVEN")
+                        #speak("Predicted Number is SEVEN")
                     elif classIndex == 8:
                         st.success("EIGHT")
-                        speak("Predicted Number is EIGHT")
+                        #speak("Predicted Number is EIGHT")
                     elif classIndex == 9:
                         st.success("NINE")
-                        speak("Predicted Number is NINE")
+                        #speak("Predicted Number is NINE")
             except Exception as e:
                 st.error("Connection Problem, Refresh Again")
                 
